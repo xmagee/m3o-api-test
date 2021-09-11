@@ -1,27 +1,13 @@
 require('dotenv').config()
-const m3o = require('@m3o/m3o-node'),
-	client = new m3o.Client({ token: process.env.MICRO_API_KEY })
+const free_endpoints = require('./free_endpoints')
 
 async function main() {
+	//// uncomment one or more of these, then 'npm start': 
 
-	/* // https://m3o.com/helloworld/overview
-		client.call('helloworld', 'Call', {
-				"name": "alex"
-			})
-			.then(response => {
-				console.log(response);
-			});
-	*/
+	//// free-to-use: 
+	//free_endpoints.HelloWorld('alex')
+	//free_endpoints.Answer('java programming language')
 	
-	/* 
-	// https://m3o.com/answer/overview
-		client.call('answer', 'Question', {
-			"query": "alex magee"
-		})
-			.then(response => {
-			console.log(response);
-			});
-	*/
 }
 
 main()
