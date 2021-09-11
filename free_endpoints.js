@@ -13,13 +13,13 @@ module.exports = {
             });
     },
     	 
-	Answer: async (query) => {
+    Answer: async (query) => {
         // https://m3o.com/answer/overview
-		client.call('answer', 'Question', {
+        client.call('answer', 'Question', {
             "query": query
         })
             .then(response => {
-            console.log(response)
+                console.log(response)
             })
     },
 
@@ -30,7 +30,7 @@ module.exports = {
             "location": location
         })
             .then(response => {
-              console.log(response)
+                console.log(response)
             })
     },
 	
@@ -40,7 +40,7 @@ module.exports = {
             "ip": ip
         })
             .then(response => {
-              console.log(response)
+                console.log(response)
             })
     }, 
 
@@ -49,10 +49,47 @@ module.exports = {
         // available types: uuid, shortid, snowflake, bigflake
         client.call('id', 'Generate', {
             "type": type
-          })
+        })
             .then(response => {
                 console.log(response)
             })
+    },
+
+    UrlShorten: async (destUrl) => {
+        client.call('url', 'Shorten', {
+            "destinationURL": destUrl
+        })
+            .then(response => {
+                console.log(response)
+            })
+    }, 
+
+    GetCurrentTime: async (location) => {
+        client.call('time', 'Now', {
+            "location": location
+        })
+            .then(response => {
+                console.log(response)         
+            })
+    },
+
+    GetTimezone: async (location) => {
+        client.call('time', 'Zone', {
+            "location": location
+        })
+            .then(response => {
+                console.log(response)       
+            })
+    }, 
+
+    AnalyzeTextSentiment: async (lang, text) => {
+        client.call('sentiment', 'Analyze', {
+            "lang": lang,
+            "text": text
+        })
+            .then(response => {
+                console.log(response);
+            });
     }
 
 }
