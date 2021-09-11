@@ -1,0 +1,12 @@
+{
+  "name": "m30-api-test",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "xmagee",
+  "dependencies": {
+    "@m3o/m3o-node": "^0.0.24",
+    "dotenv": "^10.0.0"
+  }
+}
