@@ -7,7 +7,10 @@ async function main() {
 	//// free-to-use: 
 	//free_endpoints.HelloWorld('alex')
 	//free_endpoints.Answer('java programming language')
-	
+	//free_endpoints.Weather('Bradford, PA')
+	//free_endpoints.IPGeolocation('1.1.1.1')
+	//free_endpoints.GenerateID('uuid')
+
 }
 
 main()
