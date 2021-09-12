@@ -15,6 +15,8 @@ async function main() {
 	//free_endpoints.GetCurrentTime('New York City, NY')
 	//free_endpoints.AnalyzeTextSentiment('english', 'this is very cool')
 	//free_endpoints.AnalyzeTextSentiment('english', 'this is very stupid')
+	//free_endpoints.GenerateOTP('x@y.z')
+	free_endpoints.ValidateOTP('x@y.z', '327820')
 
 }
 

@@ -88,8 +88,27 @@ module.exports = {
             "text": text
         })
             .then(response => {
+                console.log(response)
+            })
+    },
+
+    GenerateOTP: async (id) => {
+        client.call('otp', 'Generate', {
+            "id": id
+        })
+            .then(response => {
+                console.log(response)
+            })
+    }, 
+
+    ValidateOTP: async (id, code) => {
+        client.call('otp', 'Validate', {
+            "id": id,
+            "code": code
+        })
+            .then(response => {
                 console.log(response);
             });
-    }
+    },
 
 }
